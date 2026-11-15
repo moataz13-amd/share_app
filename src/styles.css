@@ -69,3 +69,49 @@ button:disabled{opacity:.55;cursor:not-allowed}
   .url-field{gap:8px;padding-left:12px}
   .url-field button{padding-inline:9px;font-size:9px}
 }
+/* Dark theme: keep every surface on the same dark palette. */
+html[data-theme=dark] body{background:var(--bg);color:var(--ink)}
+html[data-theme=dark] .sidebar{border-right-color:var(--line)}
+html[data-theme=dark] .side-link:hover,html[data-theme=dark] .collection-nav>a:hover{background:#303947;color:var(--ink)}
+html[data-theme=dark] .meter{background:#3a4555}
+html[data-theme=dark] .avatar{background:#54433f;color:#f2d2c2}
+html[data-theme=dark] .crumb span{color:#687487}
+html[data-theme=dark] .topbar{border-bottom-color:var(--line)}
+html[data-theme=dark] .violet,html[data-theme=dark] .peach,html[data-theme=dark] .sage,html[data-theme=dark] .setting-icon{background:#303949;color:#c4c9ff}
+html[data-theme=dark] .stat-foot{color:#a5b4aa}
+html[data-theme=dark] .count{background:#343d58;color:#c2c7ff}
+html[data-theme=dark] .video-card:hover{box-shadow:0 13px 25px #11172299,-6px -6px 17px #36405077}
+html[data-theme=dark] .thumb,html[data-theme=dark] .detail-thumb{background:#2d3745}
+html[data-theme=dark] .platform,html[data-theme=dark] .more{background:#303947;color:#eef1f7}
+html[data-theme=dark] .video-foot{color:#a0abc0}
+html[data-theme=dark] .collection-tag{background:#343d4b;color:#bdc6d6}
+html[data-theme=dark] .idea,html[data-theme=dark] .install-guide{background:#293241;color:var(--muted)}
+html[data-theme=dark] .idea>span{background:#343d58;color:#c2c7ff}
+html[data-theme=dark] .skeleton{background:linear-gradient(100deg,#252e3a 20%,#303a49 35%,#252e3a 50%);background-size:200% 100%}
+html[data-theme=dark] .collection-art,html[data-theme=dark] .collection-art.art1,html[data-theme=dark] .collection-art.art2,html[data-theme=dark] .collection-art.art3{background:linear-gradient(135deg,#303a49,#2a3340)}
+html[data-theme=dark] .collection-art>small,html[data-theme=dark] .remove-preview{background:#303947;color:#e1e6ef}
+html[data-theme=dark] .preview-art{background:linear-gradient(130deg,#424963,#33413f)}
+html[data-theme=dark] .save-illustration>div{background:#343d58;color:#c2c7ff}
+html[data-theme=dark] .detail-play{background:#727cf0;color:#fff}
+html[data-theme=dark] .modal{box-shadow:0 24px 60px #080b10aa}
+html[data-theme=dark] .danger{background:#a84754}
+html[data-theme=dark] .bottom-nav{border-top-color:var(--line)}
+/* Real source thumbnails first; distinct platform treatment only when unavailable. */
+.thumb{isolation:isolate}
+.thumb-placeholder{position:absolute;inset:0;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#6573a8,#8d9bb0)}
+.thumb-placeholder svg{width:30px;height:30px;opacity:.82}
+.thumb-placeholder.platform-youtube{background:linear-gradient(135deg,#a83f45,#432d43)}
+.thumb-placeholder.platform-facebook{background:linear-gradient(135deg,#4069a5,#6874bf)}
+.thumb-placeholder.platform-instagram{background:linear-gradient(135deg,#aa5a91,#dc9a70)}
+.thumb-placeholder.platform-tiktok{background:linear-gradient(135deg,#306a73,#493d67)}
+.thumb-placeholder.platform-vimeo{background:linear-gradient(135deg,#3e829e,#416486)}
+.thumb-placeholder.platform-x{background:linear-gradient(135deg,#30343b,#5d6571)}
+.thumb-placeholder.platform-reddit{background:linear-gradient(135deg,#b45b43,#d29a56)}
+.thumb-placeholder.platform-other{background:linear-gradient(135deg,#6d739b,#718f91)}
+.thumb>img{position:absolute;inset:0;z-index:1}
+.thumb>.platform,.thumb>.more{z-index:2}
+.thumb>.play-cover{z-index:3}
+.preview-art{position:relative;overflow:hidden}
+.preview-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.preview-art>.platform{z-index:2}
+.preview-art>.thumb-placeholder{position:absolute;inset:0}

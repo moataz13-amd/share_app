@@ -47,3 +47,5 @@ button:disabled{opacity:.55;cursor:not-allowed}
 }
 .collections-empty{grid-column:1/-1;border-radius:18px;background:var(--surface);box-shadow:var(--soft);min-height:255px;display:grid;place-items:center}
 .meter i{width:0}
+.detail-actions{flex-wrap:wrap}
+.detail-actions .quiet{min-height:40px;border-radius:10px}
